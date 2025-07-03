@@ -126,17 +126,6 @@ Distribution of fares colored by survival:
   - ❌ **Worst: 58.66%** with `random_state=257`
   - Accuracy varies depending on the train/test split
 
-
----
-
-## 🛠️ Requirements
-
-Install dependencies:
-
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn
-```
-
 ---
 
 ## 🧑‍💻 Author
