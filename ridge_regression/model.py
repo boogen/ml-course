@@ -17,10 +17,6 @@ def gen_data(N=10, sigma_noise=.2, fun='poly2'):
     Y = np.sin(3*np.pi*X) + eps
   else:
     raise ValueError(f"Unknown fun type: {fun}.")
-  if sorted:
-    xind = np.argsort(X[0, :])
-    X = X[:, xind]
-    Y = Y[:, xind]
   return X, Y
 
 class PolyRegression():
@@ -53,19 +49,32 @@ class PolyRegression():
 
     return self
 
+  def solve(self, x, y):
+    # Build polynomial feature matrix
+    X_poly = np.hstack([x**i for i in range(self.degree + 1)])
+
+    # Normal equation: w = (X^T X)^(-1) X^T y
+    XT_X = X_poly.T @ X_poly
+    XT_y = X_poly.T @ y
+
+    self.weights = np.linalg.inv(XT_X) @ XT_y  # or np.linalg.pinv(XT_X) @ XT_y if invertibility is a concern
+
+    return self
+
 
 functions = ['poly1', 'poly2', 'log', 'sin']
 
 
-XC, YC = gen_data(N=1000, fun='poly2', sigma_noise=0)
-plt.plot(XC, YC, '.', label='training data')
-for degree in [0, 1, 2, 5]:
-    model = PolyRegression(degree).fit(XC, YC)
-    plt.plot(XC, model.predict(XC), '-', label=f'poly degree {degree} predicted')
-plt.title('Fitting square function without noise and 1000 samples')
+X_train, Y_train = gen_data(N=10, fun='poly2', sigma_noise=0.2)
+print(f"Training data: {Y_train}")
+X_test, Y_test = gen_data(N=1000, fun='poly2', sigma_noise=0.2)
+plt.plot(X_train, Y_train, '.', label='training data')
+for degree in [2, 10, 20]:
+    model = PolyRegression(degree).solve(X_train, Y_train)
+    plt.plot(X_test, model.predict(X_test), '-', label=f'poly degree {degree} predicted')
+plt.title('Overfitting example')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.legend()
-plt.savefig('fit_poly2.png')
 plt.show()
 
 plt.close()
