@@ -15,7 +15,7 @@ The dataset is from the [Kaggle Titanic competition](https://www.kaggle.com/c/ti
 1. Clone the repository:
   ```bash
   git clone https://github.com/boogen/ml-course.git
-  cd ml-course/logistic-regression
+  cd ml-course/logistic_regression
   ```
 
 
