@@ -82,7 +82,7 @@ We generate data from a square function ('poly2'), without noise and with 1000 s
 
 ### Overfitting - square function with 10 samples
 
-When we reduce number of samples, the higher degree polynomials start to overfit the data
+When we reduce the number of samples, the higher degree polynomials start to overfit the data
 
 ![Overfitting](plots/overfitting.png)
 
