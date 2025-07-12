@@ -28,6 +28,7 @@ This project compares the performance of a custom implementation of linear regre
 ## 📈 Result
 
 Loss of the custom model: **0.5309**
+
 Loss of the Sklearn model: **0.5243**
 
 ---
