@@ -52,11 +52,3 @@ print(f"KNN Classifier Accuracy: {accuracy:.2f}")
 sklearn_knn = KNeighborsClassifier(n_neighbors=5)
 sklearn_knn.fit(X_train, y_train)
 print("SKLearn KNN Accuracy:", sklearn_knn.score(X_test, y_test))
-
-# Plot correlation heatmap
-plt.figure(figsize=(12, 6))
-sns.heatmap(iris.corr(), annot=True, cmap="coolwarm", fmt=".2f")
-plt.tight_layout()
-plt.title("Feature Correlation Heatmap - Iris Dataset")
-plt.savefig('plots/heatmap.png')
-plt.show()
