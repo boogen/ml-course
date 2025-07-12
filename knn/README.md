@@ -38,6 +38,7 @@ Shows how numeric features relate to each other:
 ## 📈 Result
 
 KNN Classifier Accuracy: **0.98**
+
 SKLearn KNN Accuracy: **0.98**
 
 ---
