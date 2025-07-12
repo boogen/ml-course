@@ -9,7 +9,7 @@ This project compares the performance of a custom implementation of linear regre
 1. Clone the repository:
   ```bash
   git clone https://github.com/boogen/ml-course.git
-  cd ml-course/knn
+  cd ml-course/linear_regression
   ```
 
 
