@@ -11,7 +11,7 @@ This repository contains hands-on machine learning projects implementing core al
 - Implements K-Nearest Neighbors from scratch.
 - Uses the Iris dataset.
 - Includes heatmap and result comparison.
-- Accuracy: **0.98** (same as Scikit-learn).
+- Accuracy: **98%** (same as Scikit-learn).
 
 ### 🔹 [Linear Regression](linear_regression/README.md)
 
@@ -37,7 +37,7 @@ This repository contains hands-on machine learning projects implementing core al
 - Implements a multinomial Naive Bayes classifier from scratch.
 - Classifies SMS messages as `spam` or `ham`.
 - Uses tokenization, Laplace smoothing, and log-probability calculations.
-- Accuracy: **~0.9847** on test set (varies slightly depending on random seed).
+- Accuracy: **98.47%** on test set (varies slightly depending on random seed).
 
 ---
 
