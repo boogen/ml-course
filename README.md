@@ -32,6 +32,13 @@ This repository contains hands-on machine learning projects implementing core al
 - Includes data generation, training (GD and closed-form), and visualizations.
 - Demonstrates overfitting, regularization, and model complexity.
 
+### 🔹 [Naive Bayes Spam Classifier](bayes_spam_classifier/README.md)
+
+- Implements a multinomial Naive Bayes classifier from scratch.
+- Classifies SMS messages as `spam` or `ham`.
+- Uses tokenization, Laplace smoothing, and log-probability calculations.
+- Accuracy: **~0.9847** on test set (varies slightly depending on random seed).
+
 ---
 
 ## 🧑‍💻 Author
