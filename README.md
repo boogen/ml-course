@@ -46,6 +46,14 @@ This repository contains hands-on machine learning projects implementing core al
 - Clusters are visualized in 2D space with randomly initialized centroids.
 - Compares final clustering visually with centroids marked.
 
+### 🔹 [Random Forest](random_forest/README.md)
+
+- Implements a Random Forest classifier from scratch.
+- Solves the Kaggle Titanic survival prediction challenge.
+- Uses manually built decision trees without scikit-learn.
+- Feature engineering includes age imputation, encoding, and handling missing values.
+= Demonstrates ensemble learning and decision boundaries.
+
 ---
 
 ## 🧑‍💻 Author
