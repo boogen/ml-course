@@ -39,6 +39,13 @@ This repository contains hands-on machine learning projects implementing core al
 - Uses tokenization, Laplace smoothing, and log-probability calculations.
 - Accuracy: **98.47%** on test set (varies slightly depending on random seed).
 
+### 🔹 [K-Means Clustering](kmeans/README.md)
+
+- Implements the K-Means clustering algorithm from scratch.
+- Uses synthetic data generated with `make_blobs`.
+- Clusters are visualized in 2D space with randomly initialized centroids.
+- Compares final clustering visually with centroids marked.
+
 ---
 
 ## 🧑‍💻 Author
