@@ -6,8 +6,19 @@ def kmeans(X, k, max_iter=100, tol=1e-4):
   n_samples, n_features = X.shape
 
   rng = np.random.default_rng()
-  initial_indices = rng.choice(n_samples, size=4, replace=False)
-  centroids = X[initial_indices]
+  centroids = []
+
+  # randomly select the first centroid
+  first_idx = np.random.randint(n_samples)
+  centroids.append(X[first_idx])
+
+  for _ in range(1, k):
+    # compute square distance to the nearest centroid
+    dist_sq = np.array([min(np.sum((x - c)**2) for c in centroids) for x in X])
+    probs = dist_sq / dist_sq.sum()
+    next_idx = np.random.choice(n_samples, p=probs)
+    centroids.append(X[next_idx])   
+  
 
   for i in range(max_iter):
     distances = np.linalg.norm(X[:, np.newaxis] - centroids, axis = 2)
@@ -22,7 +33,7 @@ def kmeans(X, k, max_iter=100, tol=1e-4):
   
   return centroids, labels
 
-X, _ = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
+X, _ = make_blobs(n_samples=300, centers=4, cluster_std=1.60, random_state=1)
 
 centroids, labels = kmeans(X, k=4)
 
