@@ -43,8 +43,8 @@ This repository contains hands-on machine learning projects implementing core al
 
 - Implements the K-Means clustering algorithm from scratch.
 - Uses synthetic data generated with `make_blobs`.
-- Clusters are visualized in 2D space with randomly initialized centroids.
-- Compares final clustering visually with centroids marked.
+- Initializes centroids using the K-Means++ strategy for improved convergence.
+- Visualizes clusters in 2D space with final centroids marked.
 
 ### 🔹 [Random Forest](random_forest/README.md)
 

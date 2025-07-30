@@ -32,7 +32,7 @@ K-Means is an **unsupervised learning algorithm** that partitions data into `k` 
 ### ✅ Features
 
 - Custom implementation using NumPy
-- Random centroid initialization
+- K-Means++ initialization for better centroid selection
 - Convergence based on centroid movement tolerance
 - Visualization of final clusters and centroids
 
@@ -48,9 +48,10 @@ The example generates 300 samples in 4 clusters and fits the K-Means algorithm:
 
 ## ⚙️ Code Highlights
 
-- Centroids are initialized randomly from data points
-- Convergence is checked using Euclidean norm between old and new centroids
-- Cluster assignments and centroid positions are updated iteratively
+- K-Means++ initialization chooses initial centroids based on weighted probabilities to improve convergence and clustering quality
+- Cluster assignment is performed using Euclidean distance
+- Iterative updates continue until centroids stabilize within a tolerance threshold
+- Final result is visualized with distinct colors for clusters and red 'X' for centroids
 
 ---
 
